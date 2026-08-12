@@ -63,11 +63,12 @@ I'm building my portfolio around practical infrastructure and cloud projects. As
 ## 📊 GitHub Activity
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=omarbenzena&show_icons=true&hide_border=true" alt="Omar's GitHub stats" />
+  <a href="https://github.com/omarbenzena?tab=repositories"><img src="https://img.shields.io/badge/Repositories-View_my_projects-181717?style=for-the-badge&logo=github" alt="Repositories" /></a>
+  <a href="https://github.com/omarbenzena?tab=overview"><img src="https://img.shields.io/badge/Contributions-View_activity-238636?style=for-the-badge&logo=github" alt="GitHub activity" /></a>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=omarbenzena&layout=compact&hide_border=true" alt="Most used languages" />
+  <i>More activity and project statistics will appear naturally as I build and publish projects.</i>
 </p>
 
 ## 🎯 2026–2027 Goals
