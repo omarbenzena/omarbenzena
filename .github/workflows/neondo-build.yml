@@ -1,0 +1,30 @@
+name: Assemble NEONDO
+
+on:
+  push:
+    branches: [neondo-live-build]
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: neondo-live-build
+      - name: Assemble HTML
+        run: |
+          cat neondo/chunk00.txt neondo/chunk01.txt neondo/chunk02.txt neondo/chunk03.txt neondo/chunk04.txt > neondo/index.html
+          test -s neondo/index.html
+          grep -q "NEONDO — Creative + Event Work in Berlin" neondo/index.html
+          grep -q "ROLE_CATALOG" neondo/index.html
+      - name: Commit assembled file
+        run: |
+          git config user.name "NEONDO Build Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add neondo/index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Assemble NEONDO live page [skip ci]"
+          git push origin neondo-live-build
