@@ -4,11 +4,11 @@ export type ExternalProfileLink = {
   visibleToRecruiters: boolean;
 };
 
-/** GitHub is intentionally not a supported public profile provider. */
+/** GitHub is intentionally not supported as a public NEONDO profile link. */
 export const PUBLIC_PROFILE_PROVIDERS = [
   'website', 'instagram', 'portfolio', 'linkedin', 'other'
 ] as const;
 
 export function filterRecruiterVisibleLinks(links: ExternalProfileLink[]) {
-  return links.filter(link => link.visibleToRecruiters && link.provider !== 'other' || link.provider !== 'github');
+  return links.filter(link => link.visibleToRecruiters);
 }
