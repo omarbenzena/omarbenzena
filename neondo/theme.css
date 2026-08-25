@@ -1,0 +1,51 @@
+:root{
+  --nd-paper:#f4f1e9;
+  --nd-paper-2:#f9f6ef;
+  --nd-card:#fffdf7;
+  --nd-text:#11110f;
+  --nd-muted:#625e57;
+  --nd-line:#171714;
+  --nd-soft-line:#c9c3b9;
+  --nd-pink:#ff5bbe;
+  --nd-blue:#7f8cff;
+  --nd-lime:#d9fe48;
+  --nd-danger:#ff4d3d;
+  --nd-focus:#2457ff;
+}
+
+body.dark{
+  --nd-paper:#151512;
+  --nd-paper-2:#1b1a17;
+  --nd-card:#211f1b;
+  --nd-text:#f5f0e7;
+  --nd-muted:#aaa49b;
+  --nd-line:#f5f0e7;
+  --nd-soft-line:#504b43;
+  --nd-pink:#ff8acb;
+  --nd-blue:#9aa4ff;
+  --nd-lime:#d9fe48;
+  --nd-danger:#ff756b;
+  --nd-focus:#8fb1ff;
+}
+
+/* Components should consume semantic tokens instead of hard-coded foreground/background pairs. */
+.nd-surface{background:var(--nd-paper);color:var(--nd-text)}
+.nd-card{background:var(--nd-card);color:var(--nd-text);border-color:var(--nd-line)}
+.nd-muted{color:var(--nd-muted)}
+.nd-border{border-color:var(--nd-line)}
+.nd-button{background:var(--nd-text);color:var(--nd-paper);border:1px solid var(--nd-line)}
+.nd-button-outline{background:transparent;color:var(--nd-text);border:1px solid var(--nd-line)}
+.nd-accent-lime{background:var(--nd-lime);color:#11110f}
+.nd-accent-pink{background:var(--nd-pink);color:#11110f}
+.nd-accent-blue{background:var(--nd-blue);color:#11110f}
+
+:where(a,button,input,select,textarea):focus-visible{
+  outline:2px solid var(--nd-focus);
+  outline-offset:2px;
+}
+
+::selection{background:var(--nd-pink);color:#11110f}
+
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
