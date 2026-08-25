@@ -1,0 +1,11 @@
+{
+  "name": "NEONDO",
+  "short_name": "NEONDO",
+  "description": "Creative and event work, discovery and community.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f1e9",
+  "theme_color": "#f4f1e9",
+  "icons": []
+}
